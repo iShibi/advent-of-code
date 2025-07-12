@@ -1,0 +1,18 @@
+{
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
+	},
+	"[jsonc]": {
+		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.formatOnSave": true,
+	"files.eol": "\n",
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"files.insertFinalNewline": true,
+	"editor.detectIndentation": false,
+}
