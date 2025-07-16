@@ -24,6 +24,10 @@ fn main() {
 			y_2019::day_4::part_1::solve(),
 			y_2019::day_4::part_2::solve()
 		),
+		(Some("2019"), Some("5")) => {
+			y_2019::day_5::part_1::solve();
+			y_2019::day_5::part_2::solve();
+		}
 		_ => println!("Usage: cargo run -- <year> <day>"),
 	}
 }
