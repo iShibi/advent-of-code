@@ -1,3 +1,4 @@
+pub mod macros;
 pub mod solution_registry;
 pub mod y_2019;
 

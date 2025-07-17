@@ -1,7 +1,4 @@
-use std::fs;
-
-pub fn solve() -> i32 {
-	let input_text = fs::read_to_string("src/y_2019/day_1/input.txt").unwrap();
+pub fn solve(input_text: &String) -> i32 {
 	let lines = input_text.split_whitespace().collect::<Vec<_>>();
 	let mut total_fuel_requirement = 0;
 	for line in lines {

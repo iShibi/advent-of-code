@@ -1,7 +1,6 @@
-use std::{collections::HashSet, fs, str::FromStr};
+use std::{collections::HashSet, str::FromStr};
 
-pub fn solve() -> u32 {
-	let input_text = fs::read_to_string("src/y_2019/day_3/input.txt").unwrap();
+pub fn solve(input_text: &String) -> u32 {
 	let wire_paths = input_text.split_whitespace().into_iter().collect::<Vec<_>>();
 	let first_wire_path_points = path_to_points(wire_paths[0]);
 	let second_wire_path_points = path_to_points(wire_paths[1]);

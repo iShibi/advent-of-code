@@ -1,7 +1,4 @@
-use std::fs;
-
-pub fn solve() -> usize {
-	let input_text = fs::read_to_string("src/y_2019/day_2/input.txt").unwrap();
+pub fn solve(input_text: &String) -> usize {
 	let mut integers = input_text
 		.split(|c| c == ',' || c == '\n')
 		.filter_map(|c| usize::from_str_radix(c, 10).ok())
