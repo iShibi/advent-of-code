@@ -58,7 +58,11 @@ pub fn solve(input_text: &String) {
 		};
 	}
 	for row in image {
-		println!("{}", row.join(""));
+		let row_str = row.join("");
+		if row_str.is_empty() {
+			continue;
+		}
+		println!("{}", row_str);
 	}
 }
 
