@@ -5,3 +5,4 @@ edition = "2024"
 build = "build.rs"
 
 [dependencies]
+md5 = "0.8.0"
