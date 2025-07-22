@@ -16,12 +16,8 @@ pub fn solve(input_text: &String) -> usize {
 				orbit_tracker.insert(sattelite, vec![parent_body]);
 			}
 		}
-		let current_orbits_count = orbit_tracker
-			.values()
-			.map(|v| v.iter().count())
-			.collect::<Vec<_>>()
-			.iter()
-			.sum::<usize>();
+		let current_orbits_count =
+			orbit_tracker.values().map(|v| v.iter().count()).collect::<Vec<_>>().iter().sum::<usize>();
 		if total_orbit_counts == current_orbits_count {
 			break;
 		} else {
@@ -30,9 +26,6 @@ pub fn solve(input_text: &String) -> usize {
 	}
 	let you_parents: HashSet<_> = orbit_tracker.get("YOU").unwrap().iter().collect();
 	let santa_parents: HashSet<_> = orbit_tracker.get("SAN").unwrap().iter().collect();
-	let unique_parents: Vec<_> = you_parents
-		.symmetric_difference(&santa_parents)
-		.cloned()
-		.collect();
+	let unique_parents: Vec<_> = you_parents.symmetric_difference(&santa_parents).cloned().collect();
 	unique_parents.len()
 }

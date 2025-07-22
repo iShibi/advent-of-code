@@ -1,6 +1,8 @@
 pub fn solve(input_text: &String) {
-	let program =
-		input_text.split(|c| c == '\n' || c == ',').filter_map(|c| c.parse::<isize>().ok()).collect::<Vec<isize>>();
+	let program = input_text
+		.split(|c| c == '\n' || c == ',')
+		.filter_map(|c| c.parse::<isize>().ok())
+		.collect::<Vec<isize>>();
 	run_program(program);
 }
 

@@ -1,15 +1,10 @@
 pub fn solve(input_text: &String) -> u32 {
 	let steps = 1000;
 	let mut moons = vec![];
-	let initial_raw_positions = input_text
-		.split(|char| char == '\n')
-		.filter(|str| !str.is_empty())
-		.collect::<Vec<_>>();
+	let initial_raw_positions = input_text.split(|char| char == '\n').filter(|str| !str.is_empty()).collect::<Vec<_>>();
 	for raw_position in initial_raw_positions {
 		let position: Vector3D = raw_position
-			.split(|char: char| {
-				char == ',' || char == '<' || char == '>' || char == '=' || char.is_whitespace()
-			})
+			.split(|char: char| char == ',' || char == '<' || char == '>' || char == '=' || char.is_whitespace())
 			.filter_map(|str| str.parse::<i32>().ok())
 			.collect::<Vec<_>>()
 			.into();

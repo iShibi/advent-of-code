@@ -1,8 +1,10 @@
 use std::collections::HashMap;
 
 pub fn solve(input_text: &String) -> usize {
-	let program =
-		input_text.split(|c| c == '\n' || c == ',').filter_map(|c| c.parse::<isize>().ok()).collect::<Vec<isize>>();
+	let program = input_text
+		.split(|c| c == '\n' || c == ',')
+		.filter_map(|c| c.parse::<isize>().ok())
+		.collect::<Vec<isize>>();
 	let mut memory = HashMap::<usize, isize>::new();
 	for (adrs, num) in program.iter().enumerate() {
 		memory.insert(adrs, num.clone());

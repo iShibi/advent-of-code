@@ -16,12 +16,8 @@ pub fn solve(input_text: &String) -> usize {
 				orbit_tracker.insert(sattelite, vec![parent_body]);
 			}
 		}
-		let current_orbits_count = orbit_tracker
-			.values()
-			.map(|v| v.iter().count())
-			.collect::<Vec<_>>()
-			.iter()
-			.sum::<usize>();
+		let current_orbits_count =
+			orbit_tracker.values().map(|v| v.iter().count()).collect::<Vec<_>>().iter().sum::<usize>();
 		if total_orbit_counts == current_orbits_count {
 			break;
 		} else {
