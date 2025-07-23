@@ -1,6 +1,7 @@
 pub mod macros;
 pub mod solution_registry;
 pub mod y_2015;
+pub mod y_2016;
 pub mod y_2019;
 
 use std::env;
