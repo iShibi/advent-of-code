@@ -1,6 +1,7 @@
 pub mod day_1;
 pub mod day_16;
 pub mod day_17;
+pub mod day_18;
 pub mod day_3;
 pub mod day_4;
 pub mod day_5;
