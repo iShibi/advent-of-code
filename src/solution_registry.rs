@@ -58,6 +58,7 @@ pub fn build_registry() -> HashMap<(&'static str, &'static str), SolutionFn> {
 	solution_registry.insert(("2020", "17"), crate::y_2020::day_17::solve as SolutionFn);
 	solution_registry.insert(("2020", "18"), crate::y_2020::day_18::solve as SolutionFn);
 	solution_registry.insert(("2020", "22"), crate::y_2020::day_22::solve as SolutionFn);
+	solution_registry.insert(("2020", "24"), crate::y_2020::day_24::solve as SolutionFn);
 	solution_registry.insert(("2020", "3"), crate::y_2020::day_3::solve as SolutionFn);
 	solution_registry.insert(("2020", "4"), crate::y_2020::day_4::solve as SolutionFn);
 	solution_registry.insert(("2020", "5"), crate::y_2020::day_5::solve as SolutionFn);
